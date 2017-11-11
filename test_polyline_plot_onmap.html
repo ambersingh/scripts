@@ -1,0 +1,34 @@
+<html> 
+<head> 
+<title>Test</title> 
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?libraries=geometry&amp;sensor=false"></script>
+<style type="text/css"> 
+#map {width:100%;height:100%;}
+</style> 
+<script type='text/javascript'>
+function initialize() {
+    var myLatlng = new google.maps.LatLng(22.6254061,88.4128599);
+    var myOptions = {
+        zoom: 13,
+        center: myLatlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+    var map = new google.maps.Map(document.getElementById("map"), myOptions);
+        
+    var decodedPath = google.maps.geometry.encoding.decodePath('yefiCan}zOTBHCHCBIRi@HI`@LfBj@rBd@d@JnAJtAVDBBBAtB?PGNQ~@SzAa@hBc@`BcA~DOv@EZ?JFFRLzDxBVVJT?LUbC@JRXdCjBj@^nAj@tAp@`Ab@b@Z`@j@NLf@RhAVpALpDjA`Br@DDHNLx@XV|A`@d@RHJ\\h@JNpAf@hAh@|@LfAHZJP\\Nt@Ff@v@Jn@Z|DlAjA^F?NCEpA@P@f@JdAHd@ZdAh@dArA~AzGbH|EpFtAzAzCfDhBvBtAtA`HrHlEvEz@z@nDzDhFrFjBtBd@b@bBpB|@bAzB`CfClCxGbHrD`EnCnCpB|BpAnAlBtBnDdE|ChDjBjBnAxAJ\\f@nA|A~@EJe@`Aj@JJ?[~@gCcAEC?ELg@AC_@Ms@KIBQD_BWQKWI}Aa@@K?CAAK?s@V_HhBIH?HBD`ATFD[zAdCZBw@BIBCH?b@\\RFbAJ\\DLCZGXAT@TBnAd@TL?FEJl@\\~Bv@t@^|@`@nAXTJb@ZrApAVHH?L?VJl@\\j@^b@}ANVThAJhAfBh@TAT@|Bv@a@bA?B@@nBj@jAd@Ts@N_AFE\\LF?DCjBuE@EUImBq@gCcAwHgDmMyF}Ay@{DsBuCaB_HyCwBy@uA]WGWMeCWkI{@oD]kKaAcNcAiBMaBMSLm@Lm@BcA?y@CDeANu@`@Fj@A^QTSTa@nAaGhAmFdBkHp@_ClAmD~BqFf@_AqFgGuBeC_BaBgGoGoI{IuCqDgCgCqE{EoGcHiAkAsB{Bc@eAYeAGe@GgAB{@DqAOBG?kA_@}DmAo@[w@KGg@Ou@Q][KgAI}@MiAi@qAg@KO]i@IKe@S}Aa@YWMy@IOEEaBs@qDkAqAMiAWg@SOMa@k@c@[aAc@uAq@oAk@k@_@eCkBSYAKTcC?MKUWW{DyBSMGG?KD[Nw@bA_Eb@aB`@iBR{AP_AFO?Q@uBCCECuAWoAKe@KsBe@gBk@a@MIHSh@CHIBIBUC'); 
+
+    var setRegion = new google.maps.Polyline({
+        path: decodedPath,
+        strokeColor: "#FF0000",
+        strokeOpacity: 1.0,
+        strokeWeight: 2,
+        map: map
+    });
+}
+
+</script> 
+</head> 
+<body onload="initialize()"> 
+<div id="map"></div>
+</body> 
+</html>

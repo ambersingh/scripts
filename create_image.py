@@ -1,0 +1,15 @@
+'''
+For creating rectangular dot images.
+'''
+
+
+from PIL import Image, ImageDraw
+# webhexcolor = "#4878A8"
+# webhexcolor = ['#FF0000', '#A52A2A', '#FA8072', '#F0FFF0', '#FFC0CB', '#C0C0C0', '#6495ED', '#9370DB', '#9400D3', '#800000', '#F5F5DC', '#7B68EE', '#66CDAA', '#8FBC8F', '#FFDEAD', '#FFF5EE', '#FFDAB9', '#808000', '#DEB887', '#FF4500', '#FFEBCD', '#6B8E23', '#2E8B57', '#7FFF00', '#008080', '#B22222', '#0000CD', '#9932CC', '#FDF5E6', '#90EE90', '#FF1493', '#FFFAF0', '#CD5C5C', '#00FA9A', '#CD853F', '#FFB6C1', '#FFFACD', '#F0E68C', '#DCDCDC', '#ADFF2F', '#ADD8E6', '#000080', '#E9967A', '#800080', '#696969', '#6A5ACD', '#00CED1', '#FFEFD5', '#008B8B', '#F08080', '#191970', '#F5DEB3', '#FAF0E6', '#FFD700', '#FF6347', '#C71585', '#F5FFFA', '#4B0082', '#BDB76B', '#DA70D6', '#FFA07A', '#00FFFF', '#98FB98', '#7CFC00', '#FF69B4', '#BC8F8F', '#B0E0E6', '#00FF00', '#DDA0DD', '#FAFAD2', '#FFFFFF', '#FFFAFA', '#A0522D', '#FFFFF0', '#00FF7F', '#D8BFD8', '#FFF0F5', '#48D1CC', '#FFF8DC', '#A9A9A9', '#708090', '#778899', '#F0F8FF', '#FF00FF', '#2F4F4F', '#E0FFFF', '#EE82EE', '#008000', '#1E90FF', '#483D8B', '#556B2F', '#F4A460', '#228B22', '#8B008B', '#8B0000', '#FF7F50', '#87CEEB', '#32CD32', '#D3D3D3', '#F5F5F5', '#006400', '#FFE4B5', '#FFFF00', '#AFEEEE', '#40E0D0', '#8A2BE2', '#20B2AA', '#DB7093', '#5F9EA0', '#00008B', '#DAA520', '#808080', '#DC143C', '#D2B48C', '#D2691E', '#FFE4C4', '#BA55D3', '#00BFFF', '#4682B4', '#87CEFA', '#F8F8FF', '#4169E1', '#FAEBD7', '#000000', '#E6E6FA', '#FFE4E1', '#8B4513', '#FF8C00', '#B8860B', '#9ACD32', '#EEE8AA', '#F0FFFF', '#0000FF', '#7FFFD4', '#FFFFE0', '#3CB371', '#B0C4DE', '#FFA500']
+webhexcolor = ['#FF0000', '#A52A2A', '#FA8072', '#FFC0CB', '#C0C0C0', '#6495ED', '#9370DB', '#800000', '#7B68EE', '#66CDAA', '#8FBC8F', '#FFDEAD', '#FFDAB9', '#808000', '#DEB887', '#FF4500', '#FFEBCD', '#6B8E23', '#2E8B57', '#008080', '#0000CD', '#9932CC', '#FF1493', '#CD5C5C', '#00FA9A', '#CD853F', '#FFB6C1', '#F0E68C', '#ADFF2F', '#ADD8E6', '#E9967A', '#800080', '#696969', '#00CED1', '#008B8B', '#F08080', '#191970', '#F5DEB3', '#FFD700', '#FF6347', '#C71585', '#4B0082', '#BDB76B', '#FFA07A', '#00FFFF', '#98FB98', '#BC8F8F', '#00FF00', '#DDA0DD', '#FFFAFA', '#A0522D', '#D8BFD8', '#48D1CC', '#A9A9A9', '#708090', '#F0F8FF', '#FF00FF', '#2F4F4F', '#E0FFFF', '#1E90FF', '#556B2F', '#F4A460', '#228B22', '#8B008B', '#8B0000', '#FF7F50', '#87CEEB', '#32CD32', '#D3D3D3', '#006400', '#FFE4B5', '#FFFF00', '#AFEEEE', '#40E0D0', '#8A2BE2', '#20B2AA', '#DB7093', '#5F9EA0', '#00008B', '#DAA520', '#808080', '#DC143C', '#D2B48C', '#D2691E', '#BA55D3', '#00BFFF', '#4682B4', '#4169E1', '#FAEBD7', '#000000', '#E6E6FA', '#FFE4E1', '#8B4513', '#FF8C00', '#B8860B', '#9ACD32', '#EEE8AA', '#7FFFD4', '#3CB371', '#B0C4DE', '#FFA500']
+for color in webhexcolor:
+    im = Image.new("RGB", (6,6), color)
+    im.save( "rectangular_dots/"+ color.split('#')[1] +".png")
+
+# im = Image.new("RGB", (50,50), webhexcolor)
+# im.save( "color.png")
